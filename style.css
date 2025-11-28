@@ -1,0 +1,395 @@
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #f6e7d8, #f3d9bd);
+    color: #333;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: transparent;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px; 
+}
+
+nav a {
+    text-decoration: none;
+    color: #6a573c;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #b58a50;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #6a573c;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 5%; 
+    gap: 40px;
+    min-height: 80vh; 
+}
+
+.hero-left img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid #e9d5b6;
+}
+
+.hero-right h1 {
+    font-size: 45px;
+    color: #6a573c;
+}
+
+.hero-right h1 span {
+    color: #c08a3e;
+    font-weight: 700;
+}
+
+.hero-right h2 {
+    font-size: 28px;
+    margin: 10px 0;
+    color: #c08a3e;
+    font-weight: 700;
+}
+
+.hero-right p {
+    max-width: 500px; 
+    margin: 20px 0;
+    color: #5c4a33;
+    line-height: 1.6;
+}
+
+.socials {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.socials i {
+    font-size: 22px;
+    color: #6a573c;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.socials i:hover {
+    color: #c08a3e;
+}
+
+
+.btn {
+    padding: 12px 25px;
+    background: #6a573c;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #c08a3e;
+}
+
+@media(max-width: 850px) {
+    nav {
+        flex-direction: column; 
+        padding: 15px 5%;
+        text-align: center;
+    }
+
+    nav .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 15px; 
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 5%;
+        gap: 30px; 
+        min-height: auto;
+    }
+    
+    .hero-left img {
+        width: 200px; 
+        height: 200px;
+        margin-bottom: 0; 
+        border-width: 6px; 
+    }
+
+    .hero-right {
+        width: 100%; 
+        padding: 0; 
+    }
+
+    .hero-right h1,
+    .hero-right h2 {
+        text-align: center;
+    }
+    
+    .hero-right p {
+        max-width: 100%; 
+        padding: 0 5%; 
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+  .socials {
+        justify-content: center; 
+    }
+    
+    .btn {
+        margin-left: auto;
+        margin-right: auto;
+        display: block; 
+    }
+
+
+    .hero-right h1 {
+        font-size: 32px; 
+    }
+
+    .hero-right h2 {
+        font-size: 22px; 
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        gap: 8px 10px; 
+    }
+
+    .hero-right h1 {
+        font-size: 28px;
+    }
+
+    .hero-right h2 {
+        font-size: 20px;
+    }
+}
+
+.about-section,
+.skills-section,
+.services-section,
+.blog-section,
+.contact-section {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: #fcf6f0;
+    margin-bottom: 0;
+    }
+    
+.skills-section,
+.blog-section,
+.contact-section { 
+    background-color: #e9d5b6; 
+}
+
+.about-section h1,
+.skills-section h1,
+.services-section h1,
+.blog-section h1,
+.contact-section h1 {
+    font-size: 36px;
+    color: #c08a3e;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 0; 
+    font-weight: 700;
+}
+
+.about-section p,
+.blog-section p,
+.contact-section p {
+    font-size: 16px;
+    color: #5c4a33;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.skills-grid,
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto 0;
+    text-align: left; 
+}
+
+.skill-item,
+.service-item {
+    background-color: #fcf6f0; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover,
+.service-item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.skill-item h3,
+.service-item h3 {
+    font-size: 22px;
+    color: #6a573c;
+    margin-bottom: 10px;
+}
+
+.skill-item p,
+.service-item p {
+    font-size: 15px;
+    color: #5c4a33;
+    line-height: 1.6;
+}
+
+@media(max-width: 850px) {
+    nav {
+        flex-direction: column; 
+        padding: 15px 5%;
+        text-align: center;
+    }
+
+    nav .logo {
+        margin-bottom: 10px; 
+    }
+
+    nav ul {
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 10px 15px; 
+    }
+    
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 5%; 
+        gap: 30px; 
+        min-height: auto;
+    }
+    
+    .hero-left img {
+        width: 200px; 
+        height: 200px;
+        margin-bottom: 0; 
+        border-width: 6px; 
+    }
+
+    .hero-right {
+        width: 100%; 
+        padding: 0; 
+    }
+
+    .hero-right h1,
+    .hero-right h2 {
+        text-align: center;
+    }
+    
+    .hero-right p {
+        max-width: 100%; 
+        padding: 0 5%; 
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+
+    .socials {
+        justify-content: center; 
+    }
+    
+    .btn {
+        margin-left: auto;
+        margin-right: auto;
+        display: block; 
+    }
+
+
+    .hero-right h1 {
+        font-size: 32px; 
+    }
+
+    .hero-right h2 {
+        font-size: 22px; 
+    }
+
+    .about-section,
+    .skills-section,
+    .services-section,
+    .blog-section,
+    .contact-section {
+        padding: 50px 5%;
+    }
+    
+    .about-section h1,
+    .skills-section h1,
+    .services-section h1,
+    .blog-section h1,
+    .contact-section h1 {
+        font-size: 28px;
+    }
+
+    .skills-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+        margin-top: 30px;
+    }
+
+    .skill-item,
+    .service-item {
+        padding: 25px;
+    }
+
+    .skill-item h3,
+    .service-item h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        gap: 8px 10px; 
+    }
+
+    .hero-right h1 {
+        font-size: 28px;
+    }
+
+    .hero-right h2 {
+        font-size: 20px;
+    }
+      }
